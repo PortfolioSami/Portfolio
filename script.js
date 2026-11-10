@@ -1,68 +1,102 @@
-/* ============================================
-   Portfolio Website — JavaScript
-   Handles navbar scroll effect, animations,
-   and form behavior.
-   ============================================ */
+/* ============================================================
+   Samuel Tassew — Portfolio scripts
+   - navbar border on scroll
+   - active nav link
+   - scroll reveal
+   - screenshot lightbox (click to enlarge)
+   - footer year
+   ============================================================ */
 
-// --- Navbar: add shadow on scroll ---
-window.addEventListener('scroll', function () {
-  const navbar = document.querySelector('.navbar');
-  if (navbar) {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
-  }
-});
-
-// --- Scroll fade-in animation ---
-// Elements with class "fade-in" become visible when scrolled into view
 document.addEventListener('DOMContentLoaded', function () {
-  const faders = document.querySelectorAll('.fade-in');
+  // --- Navbar: hairline border once the page is scrolled ---
+  var nav = document.querySelector('.site-nav');
+  function onScroll() {
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 10);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-  const observer = new IntersectionObserver(
-    function (entries) {
+  // --- Highlight the nav link for the current page ---
+  var current = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.site-nav .nav-link').forEach(function (link) {
+    if (link.getAttribute('href') === current) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+
+  // --- Close the mobile menu after tapping a link ---
+  var collapseEl = document.getElementById('navMenu');
+  if (collapseEl && window.bootstrap) {
+    collapseEl.querySelectorAll('.nav-link').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (collapseEl.classList.contains('show')) {
+          bootstrap.Collapse.getOrCreateInstance(collapseEl).hide();
+        }
+      });
+    });
+  }
+
+  // --- Scroll reveal ---
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // only animate once
+          observer.unobserve(entry.target);
         }
       });
-    },
-    { threshold: 0.15 }
-  );
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function (el) { observer.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('visible'); });
+  }
 
-  faders.forEach(function (el) {
-    observer.observe(el);
-  });
-});
+  // --- Lightbox for screenshots ---
+  var triggers = document.querySelectorAll('[data-lightbox]');
+  if (triggers.length) {
+    var box = document.createElement('div');
+    box.className = 'lightbox';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-label', 'Enlarged screenshot');
+    box.innerHTML =
+      '<button type="button" class="lightbox-close" aria-label="Close enlarged image">&times;</button>' +
+      '<img alt="" />';
+    document.body.appendChild(box);
+    var boxImg = box.querySelector('img');
+    var closeBtn = box.querySelector('.lightbox-close');
+    var lastTrigger = null;
 
-// --- Contact form handler (UI only — does not actually submit) ---
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contactForm');
-  const toast = document.getElementById('formToast');
+    function open(trigger) {
+      lastTrigger = trigger;
+      var inner = trigger.querySelector('img');
+      boxImg.src = trigger.getAttribute('data-lightbox');
+      boxImg.alt = inner ? inner.alt : '';
+      box.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+    function close() {
+      box.classList.remove('open');
+      document.body.style.overflow = '';
+      if (lastTrigger) lastTrigger.focus();
+    }
 
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault(); // prevent real submission
-
-      // Show a Bootstrap toast as confirmation
-      if (toast) {
-        const bsToast = new bootstrap.Toast(toast);
-        bsToast.show();
-      }
-
-      form.reset();
+    triggers.forEach(function (t) {
+      t.addEventListener('click', function () { open(t); });
+    });
+    closeBtn.addEventListener('click', close);
+    box.addEventListener('click', function (e) { if (e.target === box) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && box.classList.contains('open')) close();
+      if (e.key === 'Tab' && box.classList.contains('open')) { e.preventDefault(); closeBtn.focus(); }
     });
   }
-});
 
-// --- Active nav link highlighting based on current page ---
-document.addEventListener('DOMContentLoaded', function () {
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-  navLinks.forEach(function (link) {
-    const href = link.getAttribute('href');
-    if (href === currentPage) {
-      link.classList.add('active');
-    }
+  // --- Footer year ---
+  document.querySelectorAll('[data-year]').forEach(function (el) {
+    el.textContent = new Date().getFullYear();
   });
 });

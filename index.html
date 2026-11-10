@@ -3,184 +3,268 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samim | Software Developer</title>
+  <title>Samuel Tassew | Software Engineer &amp; CS Student</title>
+  <meta name="description" content="Samuel Tassew — Computer Science student at Seattle Pacific University building full-stack products for real users in Ethiopia and the US." />
+  <script>document.documentElement.classList.add('js');</script>
 
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <!-- Custom CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ==================== NAVBAR ==================== -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main">
     <div class="container">
-      <a class="navbar-brand" href="index.html">&lt;Samim /&gt;</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <a class="navbar-brand brand" href="index.html">Samuel Tassew<span class="dot">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="hero-section text-center text-md-start" style="padding-top: 8rem;">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Text column -->
-        <div class="col-md-7">
-          <p class="mb-2 fw-semibold" style="opacity:0.85;">Hello, I'm</p>
-          <h1 class="hero-title">Samim</h1>
-          <p class="hero-subtitle">
-            Computer Science Student &amp; Aspiring Software Engineer<br />
-            Building meaningful software, one project at a time.
-          </p>
-          <div class="mt-4">
-            <a href="resume.html" class="btn btn-outline-light me-2 mb-2">View Resume</a>
-            <a href="portfolio.html" class="btn btn-outline-light mb-2">See My Work</a>
-          </div>
-        </div>
-        <!-- Image column -->
-        <div class="col-md-5 text-center mt-4 mt-md-0">
-          <img src="images/profile.jpg" alt="Samim — profile photo" class="hero-img" />
-        </div>
-      </div>
-    </div>
-  </section>
+  <main id="main">
 
-  <!-- ==================== ABOUT ME ==================== -->
-  <section class="section" id="about">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center fade-in">
-          <h2 class="section-title">About Me</h2>
-          <p class="section-subtitle">A quick introduction</p>
-          <p class="lead">
-            I'm a Computer Science student at <strong>Seattle Pacific University</strong>, passionate about
-            building full-stack applications that solve real problems. From ed-tech platforms
-            to healthcare tools, I love turning ideas into polished software. I'm actively
-            seeking internship opportunities in software engineering where I can grow,
-            contribute, and learn from experienced teams.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== SKILLS ==================== -->
-  <section class="section section-alt" id="skills">
-    <div class="container text-center fade-in">
-      <h2 class="section-title">Technical Skills</h2>
-      <p class="section-subtitle">Languages, frameworks, and tools I work with</p>
-
-      <div class="row justify-content-center mt-4">
-        <div class="col-lg-9">
-          <span class="skill-badge">TypeScript</span>
-          <span class="skill-badge">JavaScript</span>
-          <span class="skill-badge">Python</span>
-          <span class="skill-badge">C++</span>
-          <span class="skill-badge">C#</span>
-          <span class="skill-badge">SQL</span>
-          <span class="skill-badge">Next.js</span>
-          <span class="skill-badge">NestJS</span>
-          <span class="skill-badge">React</span>
-          <span class="skill-badge">Node.js</span>
-          <span class="skill-badge">PostgreSQL</span>
-          <span class="skill-badge">Redis</span>
-          <span class="skill-badge">Git</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FEATURED PROJECTS ==================== -->
-  <section class="section" id="projects">
-    <div class="container">
-      <div class="text-center mb-5 fade-in">
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-subtitle">A preview of what I've been building</p>
-      </div>
-
-      <div class="row g-4">
-        <!-- Project 1 -->
-        <div class="col-md-4 fade-in">
-          <div class="card h-100">
-            <img src="images/Examprep.png" class="card-img-top" alt="Ethiopian National Exam Prep Platform" />
-            <div class="card-body">
-              <h5 class="card-title">Ethiopian Exam Prep</h5>
-              <p class="card-text">
-                A full-stack ed-tech platform helping Ethiopian students prepare
-                for national exams with practice tests, progress tracking, and analytics.
-              </p>
-              <a href="portfolio.html" class="btn btn-sm btn-primary">Learn More</a>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-7">
+            <p class="hero-kicker"><span class="pulse" aria-hidden="true"></span>Open to software engineering internships</p>
+            <h1 class="hero-name">Samuel<br /><span class="last">Tassew</span></h1>
+            <p class="hero-tagline">
+              <strong>Computer Science student at Seattle Pacific University</strong> building full-stack
+              products for real users in Ethiopia and the US.
+            </p>
+            <div class="hero-actions">
+              <a href="portfolio.html" class="btn-main">See my projects <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              <a href="Resume.pdf" class="btn-line" download><i class="bi bi-download" aria-hidden="true"></i> Download resume</a>
             </div>
           </div>
-        </div>
-        <!-- Project 2 -->
-        <div class="col-md-4 fade-in">
-          <div class="card h-100">
-            <img src="images/DischargeLink.png" class="card-img-top" alt="DischargeLink" />
-            <div class="card-body">
-              <h5 class="card-title">DischargeLink</h5>
-              <p class="card-text">
-                A healthcare coordination tool that streamlines hospital discharge
-                workflows, improving communication between providers and patients.
-              </p>
-              <a href="portfolio.html" class="btn btn-sm btn-primary">Learn More</a>
-            </div>
-          </div>
-        </div>
-        <!-- Project 3 -->
-        <div class="col-md-4 fade-in">
-          <div class="card h-100">
-            <img src="images/OKR.png" class="card-img-top" alt="Workforce Management System" />
-            <div class="card-body">
-              <h5 class="card-title">Workforce Management</h5>
-              <p class="card-text">
-                An internal tool for managing employees, scheduling shifts, and
-                tracking attendance — designed for small-to-medium businesses.
-              </p>
-              <a href="portfolio.html" class="btn btn-sm btn-primary">Learn More</a>
+          <div class="col-lg-5">
+            <div class="hero-photo">
+              <img src="images/profile-web.jpg" alt="Portrait of Samuel Tassew" width="750" height="1000" />
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="text-center mt-5 fade-in">
-        <a href="portfolio.html" class="btn btn-outline-primary">View All Projects</a>
+    <!-- ==================== ABOUT ==================== -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4 reveal">
+            <p class="eyebrow">About</p>
+            <h2 class="section-title">Hi, I'm Samuel.</h2>
+          </div>
+          <div class="col-lg-8 reveal">
+            <div class="about-text">
+              <p>
+                I'm a Computer Science student at Seattle Pacific University, expected to graduate in June 2027.
+                I build full-stack products for real users in Ethiopia and the US, from a multi-tenant
+                workforce platform to a hospital discharge-placement tool.
+              </p>
+              <p>
+                I'm an Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate, and I'm looking
+                for a software engineering internship where I can ship production code with an experienced team.
+              </p>
+            </div>
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <a href="Resume.pdf" class="btn-main" download><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> Download resume (PDF)</a>
+              <a href="resume.html" class="btn-line">View resume online</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ==================== FEATURED PROJECTS ==================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="d-md-flex justify-content-between align-items-end mb-5 reveal">
+          <div>
+            <p class="eyebrow">Selected work</p>
+            <h2 class="section-title">Featured projects</h2>
+            <p class="section-lead mb-md-0">Products I've designed and built, each with the full problem-to-result story.</p>
+          </div>
+          <a href="portfolio.html" class="text-link">All 5 projects <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        </div>
+
+        <div class="row g-4">
+          <!-- Workforce Management App -->
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="p-card">
+              <div class="thumb">
+                <img src="images/OKR.png" alt="Workforce Management App dashboard showing attendance stats and a weekly attendance chart" loading="lazy" width="2874" height="1742" />
+              </div>
+              <div class="body">
+                <div class="mb-2">
+                  <span class="chip chip-team"><i class="bi bi-people-fill" aria-hidden="true"></i> Team of 3</span>
+                </div>
+                <h3>Workforce Management App</h3>
+                <p class="pitch">A multi-tenant platform for organizations in Ethiopia: geofenced clock-in, shifts, leave, OKRs and reviews, in English and Amharic.</p>
+                <p class="small mb-3"><strong>My role:</strong> Founder &amp; product lead, built the Company Admin and Super Admin frontends</p>
+                <div class="foot">
+                  <a href="portfolio.html#workforce" class="text-link">Read the case study <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Ethiopian Exam Prep -->
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="p-card">
+              <div class="thumb">
+                <img src="images/Examprep.png" alt="Ethiopian National Exam Prep student dashboard with study stats and upcoming exams" loading="lazy" width="2940" height="1912" />
+              </div>
+              <div class="body">
+                <div class="mb-2">
+                  <span class="ph">[CONFIRM: Team or Individual]</span>
+                </div>
+                <h3>Ethiopian National Exam Prep</h3>
+                <p class="pitch">Practice questions, timed mock exams and weak-topic recommendations for Ethiopian students in grades 9–12.</p>
+                <p class="small mb-3"><strong>My role:</strong> <span class="ph">[ADD ROLE]</span></p>
+                <div class="foot">
+                  <a href="portfolio.html#exam-prep" class="text-link">Read the case study <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- DischargeLink -->
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="p-card">
+              <div class="thumb">
+                <img src="images/DischargeLink.png" alt="DischargeLink referrals dashboard with a list of recent referrals and their status" loading="lazy" width="2940" height="1912" />
+              </div>
+              <div class="body">
+                <div class="mb-2">
+                  <span class="ph">[CONFIRM: Team or Individual]</span>
+                </div>
+                <h3>DischargeLink</h3>
+                <p class="pitch">Connects hospitals, adult family homes, pharmacies and patients so post-discharge placement doesn't depend on phone tag.</p>
+                <p class="small mb-3"><strong>My role:</strong> <span class="ph">[ADD ROLE]</span></p>
+                <div class="foot">
+                  <a href="portfolio.html#dischargelink" class="text-link">Read the case study <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS ==================== -->
+    <section class="section section-alt" id="certifications">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4 reveal">
+            <p class="eyebrow">Certifications</p>
+            <h2 class="section-title">Credentials</h2>
+          </div>
+          <div class="col-lg-8 reveal">
+            <div class="cert">
+              <!-- TODO: when you have the badge, replace this div's contents with:
+                   <img src="images/oci-ai-foundations-badge.png" alt="Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate badge" /> -->
+              <div class="cert-badge" aria-hidden="true"><i class="bi bi-cloud-check"></i><span>OCI</span></div>
+              <div>
+                <h3>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
+                <p class="issuer">Oracle · Oracle Cloud Infrastructure (OCI)</p>
+                <p class="cert-meta"><strong>Earned:</strong> <span class="ph">[ADD DATE]</span></p>
+                <p class="cert-meta mb-0"><strong>Verify:</strong> <span class="ph">[ADD CREDENTIAL / VERIFICATION LINK]</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SKILLS ==================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="reveal">
+          <p class="eyebrow">Toolkit</p>
+          <h2 class="section-title">Technical skills</h2>
+          <p class="section-lead">What I use to take a product from spec to shipped.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="skill-group">
+              <h3>Languages</h3>
+              <span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Python</span>
+              <span class="tag">C++</span><span class="tag">C#</span><span class="tag">SQL</span>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="skill-group">
+              <h3>Frameworks</h3>
+              <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">NestJS</span><span class="tag">Node.js</span>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="skill-group">
+              <h3>Data &amp; Tools</h3>
+              <span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Drizzle ORM</span>
+              <span class="tag">Vitest</span><span class="tag">Git</span><span class="tag">GitHub</span>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3 reveal">
+            <div class="skill-group">
+              <h3>Cloud</h3>
+              <span class="tag">Oracle Cloud Infrastructure</span><span class="tag">OCI AI Foundations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT CTA ==================== -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <h2>Let's build something together.</h2>
+              <p class="mb-0">I'm looking for software engineering internships. The quickest way to reach me is by email.</p>
+            </div>
+            <div class="col-lg-5 d-flex flex-wrap gap-2 justify-content-lg-end">
+              <a href="contact.html" class="btn-main">Get in touch</a>
+              <a href="https://github.com/Sami-T31" class="btn-line" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i> GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="footer">
-    <div class="container text-center">
-      <div class="mb-3">
-        <a href="https://github.com/Sami-T31" target="_blank" class="social-icon" aria-label="GitHub">
-          <i class="bi bi-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/samuel-tassew-942529110" target="_blank" class="social-icon" aria-label="LinkedIn">
-          <i class="bi bi-linkedin"></i>
-        </a>
+  <footer class="site-footer">
+    <div class="container d-md-flex justify-content-between align-items-center">
+      <div><span class="f-name">Samuel Tassew</span> · &copy; <span data-year>2026</span></div>
+      <div class="f-links">
+        <a href="mailto:samimu1995@gmail.com" aria-label="Email Samuel Tassew"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+        <a href="https://github.com/Sami-T31" target="_blank" rel="noopener noreferrer" aria-label="Samuel Tassew on GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/samuel-tassew-942529110" target="_blank" rel="noopener noreferrer" aria-label="Samuel Tassew on LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="Resume.pdf" download>Resume (PDF)</a>
       </div>
-      <p class="mb-0 small">&copy; 2026 Samim. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>

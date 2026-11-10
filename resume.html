@@ -3,236 +3,208 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume | Samim</title>
+  <title>Resume | Samuel Tassew</title>
+  <meta name="description" content="Resume of Samuel Tassew: education, certifications, experience, projects and skills." />
+  <script>document.documentElement.classList.add('js');</script>
 
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <!-- Custom CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ==================== NAVBAR ==================== -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main">
     <div class="container">
-      <a class="navbar-brand" href="index.html">&lt;Samim /&gt;</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <a class="navbar-brand brand" href="index.html">Samuel Tassew<span class="dot">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- ==================== PAGE HEADER ==================== -->
-  <section class="page-header" style="padding-top: 7rem;">
-    <div class="container">
-      <h1 class="fw-bold">My Resume</h1>
-      <p class="lead mb-0" style="opacity:0.9;">Education, skills, experience &amp; leadership</p>
-    </div>
-  </section>
+  <main id="main">
 
-  <!-- ==================== DOWNLOAD BUTTON ==================== -->
-  <section class="section pb-0">
-    <div class="container text-center fade-in">
-      <a href="Resume.pdf" download class="btn btn-primary btn-lg">
-        <i class="bi bi-download me-2"></i>Download Resume (PDF)
-      </a>
-    </div>
-  </section>
+    <!-- ==================== PAGE HEADER ==================== -->
+    <header class="page-head">
+      <div class="container">
+        <p class="eyebrow">Resume</p>
+        <h1>Samuel Tassew</h1>
+        <p>Computer Science student at Seattle Pacific University. I focus on TypeScript/React and Node/NestJS, building full-stack products with clean UIs and scalable APIs.</p>
+        <div class="d-flex flex-wrap gap-2 mt-4 no-print">
+          <a href="Resume.pdf" class="btn-main" download><i class="bi bi-download" aria-hidden="true"></i> Download resume (PDF)</a>
+          <button type="button" class="btn-line" onclick="window.print()"><i class="bi bi-printer" aria-hidden="true"></i> Print / save this page</button>
+        </div>
+      </div>
+    </header>
 
-  <!-- ==================== EDUCATION ==================== -->
-  <section class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto fade-in">
-          <h2 class="section-title">Education</h2>
-          <p class="section-subtitle">Where I've studied</p>
+    <section class="section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
 
-          <div class="timeline mt-4">
-            <!-- SPU -->
-            <div class="timeline-item">
-              <h5>Seattle Pacific University</h5>
-              <p class="timeline-date">Expected June 2027</p>
-              <p>Bachelor of Science in Computer Science</p>
+            <!-- ============ EDUCATION ============ -->
+            <div class="r-block reveal">
+              <h2>Education</h2>
+              <div class="r-item">
+                <div class="r-when">Sep 2025 – Expected June 2027</div>
+                <div>
+                  <h3>Seattle Pacific University</h3>
+                  <p class="where">Bachelor of Science in Computer Science · Seattle, WA</p>
+                </div>
+              </div>
+              <div class="r-item">
+                <div class="r-when">Sep 2022 – June 2024</div>
+                <div>
+                  <h3>Shoreline Community College</h3>
+                  <p class="where">Associate of Science in Computer Science · Shoreline, WA</p>
+                </div>
+              </div>
             </div>
-            <!-- Shoreline -->
-            <div class="timeline-item">
-              <h5>Shoreline Community College</h5>
-              <p class="timeline-date">Completed</p>
-              <p>Associate of Science in Computer Science</p>
+
+            <!-- ============ CERTIFICATIONS ============ -->
+            <div class="r-block reveal" id="certifications">
+              <h2>Certifications</h2>
+              <div class="cert">
+                <!-- TODO: when you have the badge, replace this div's contents with:
+                     <img src="images/oci-ai-foundations-badge.png" alt="Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate badge" /> -->
+                <div class="cert-badge" aria-hidden="true"><i class="bi bi-cloud-check"></i><span>OCI</span></div>
+                <div>
+                  <h3>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</h3>
+                  <p class="issuer">Oracle · Oracle Cloud Infrastructure (OCI)</p>
+                  <p class="cert-meta"><strong>Earned:</strong> <span class="ph">[ADD DATE]</span></p>
+                  <p class="cert-meta mb-0"><strong>Verify:</strong> <span class="ph">[ADD CREDENTIAL / VERIFICATION LINK]</span></p>
+                </div>
+              </div>
             </div>
+
+            <!-- ============ EXPERIENCE ============ -->
+            <div class="r-block reveal">
+              <h2>Experience</h2>
+              <div class="r-item">
+                <div class="r-when">Jun 2024 – Present</div>
+                <div>
+                  <h3>Founder · Aflagat Trading</h3>
+                  <p class="where">Tech supply import business · Addis Ababa, Ethiopia</p>
+                  <ul>
+                    <li>Founded and scaled an import business, managing end-to-end operations: procurement, logistics, and B2B/B2G client relations.</li>
+                    <li>Secured government contracts through strategic networking and compliance with procurement regulations.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="r-item">
+                <div class="r-when">May 2025 – Present</div>
+                <div>
+                  <h3>Founder &amp; Product Lead · Workforce Management App</h3>
+                  <p class="where">Team of 3 · Ethiopia</p>
+                  <ul>
+                    <li>Lead the product for a multi-tenant workforce platform with geofenced clock-in/out, shifts, leave, attendance, OKRs, performance reviews and Amharic support.</li>
+                    <li>Built the Company Admin and Super Admin web app frontends.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- ============ PROJECTS ============ -->
+            <div class="r-block reveal">
+              <h2>Projects</h2>
+              <div class="r-item">
+                <div class="r-when">In development</div>
+                <div>
+                  <h3><a href="portfolio.html#exam-prep">Ethiopian National Exam Prep Platform</a></h3>
+                  <p class="where">Practice questions, timed mock exams, analytics and weak-topic recommendations for grades 9–12.</p>
+                  <span class="tag">Next.js</span><span class="tag">NestJS</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span>
+                </div>
+              </div>
+              <div class="r-item">
+                <div class="r-when">In development</div>
+                <div>
+                  <h3><a href="portfolio.html#dischargelink">DischargeLink</a></h3>
+                  <p class="where">Multi-sided platform for post-discharge placement, with RBAC and automated workflows.</p>
+                  <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span>
+                </div>
+              </div>
+              <div class="r-item">
+                <div class="r-when">Backend nearly complete</div>
+                <div>
+                  <h3><a href="portfolio.html#parks">Public Parks Platform</a></h3>
+                  <p class="where">Reservations and enforcement for Addis Ababa recreation facilities, built spec-first.</p>
+                  <span class="tag">NestJS</span><span class="tag">Drizzle ORM</span><span class="tag">Vitest</span>
+                </div>
+              </div>
+              <div class="r-item">
+                <div class="r-when">Capstone · due May 2027</div>
+                <div>
+                  <h3><a href="portfolio.html#athleteguard">AthleteGuard</a></h3>
+                  <p class="where">Explainable injury-risk monitoring for competitive soccer teams. Team of 5.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ============ SKILLS ============ -->
+            <div class="r-block reveal">
+              <h2>Technical skills</h2>
+              <div class="row g-3">
+                <div class="col-sm-6"><div class="skill-group"><h3>Languages</h3>
+                  <span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">C++</span><span class="tag">C#</span><span class="tag">SQL</span>
+                </div></div>
+                <div class="col-sm-6"><div class="skill-group"><h3>Frameworks</h3>
+                  <span class="tag">React</span><span class="tag">Next.js</span><span class="tag">NestJS</span><span class="tag">Node.js</span>
+                </div></div>
+                <div class="col-sm-6"><div class="skill-group"><h3>Data &amp; Tools</h3>
+                  <span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Drizzle ORM</span><span class="tag">Vitest</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">Linux</span>
+                </div></div>
+                <div class="col-sm-6"><div class="skill-group"><h3>Cloud</h3>
+                  <span class="tag">Oracle Cloud Infrastructure</span><span class="tag">OCI AI Foundations</span>
+                </div></div>
+              </div>
+            </div>
+
+            <!-- ============ LEADERSHIP ============ -->
+            <div class="r-block reveal">
+              <h2>Leadership</h2>
+              <div class="r-item">
+                <div class="r-when">Sep 2025 – Present</div>
+                <div>
+                  <h3>National Society of Black Engineers (NSBE)</h3>
+                  <p class="where">Member · Seattle Pacific University</p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== TECHNICAL SKILLS ==================== -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto fade-in">
-          <h2 class="section-title">Technical Skills</h2>
-          <p class="section-subtitle">Languages, frameworks &amp; tools</p>
-
-          <div class="row g-4 mt-2">
-            <!-- Languages -->
-            <div class="col-md-6">
-              <div class="icon-box h-100">
-                <i class="bi bi-code-slash"></i>
-                <h5>Languages</h5>
-                <p class="mb-0">TypeScript, JavaScript, Python, C++, C#, SQL</p>
-              </div>
-            </div>
-            <!-- Frameworks -->
-            <div class="col-md-6">
-              <div class="icon-box h-100">
-                <i class="bi bi-layers"></i>
-                <h5>Frameworks &amp; Libraries</h5>
-                <p class="mb-0">Next.js, NestJS, React, Node.js</p>
-              </div>
-            </div>
-            <!-- Databases -->
-            <div class="col-md-6">
-              <div class="icon-box h-100">
-                <i class="bi bi-database"></i>
-                <h5>Databases</h5>
-                <p class="mb-0">PostgreSQL, Redis</p>
-              </div>
-            </div>
-            <!-- Tools -->
-            <div class="col-md-6">
-              <div class="icon-box h-100">
-                <i class="bi bi-tools"></i>
-                <h5>Tools &amp; Platforms</h5>
-                <p class="mb-0">Git, GitHub, VS Code, Linux</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== EXPERIENCE ==================== -->
-  <section class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto fade-in">
-          <h2 class="section-title">Experience</h2>
-          <p class="section-subtitle">Professional background</p>
-
-          <div class="timeline mt-4">
-            <div class="timeline-item">
-              <h5>Founder — Aflagat Trading</h5>
-              <p class="timeline-date">Entrepreneurial Venture</p>
-              <p>
-                Founded and managed a trading company, overseeing operations, financial
-                planning, and client relationships. Developed strong leadership,
-                problem-solving, and business management skills that complement my
-                technical expertise.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== PROJECTS SUMMARY ==================== -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto fade-in">
-          <h2 class="section-title">Projects</h2>
-          <p class="section-subtitle">Key projects I've contributed to</p>
-
-          <div class="timeline mt-4">
-            <div class="timeline-item">
-              <h5>Ethiopian National Exam Prep Platform</h5>
-              <p>Full-stack ed-tech application with practice exams, analytics dashboard, and progress tracking for students preparing for national examinations.</p>
-              <span class="tech-tag">Next.js</span>
-              <span class="tech-tag">NestJS</span>
-              <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">TypeScript</span>
-            </div>
-            <div class="timeline-item">
-              <h5>DischargeLink</h5>
-              <p>Healthcare coordination platform designed to streamline hospital discharge processes, improving communication between care teams and patients.</p>
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">PostgreSQL</span>
-            </div>
-            <div class="timeline-item">
-              <h5>Workforce Management System</h5>
-              <p>Employee scheduling and attendance tracking system built for small-to-medium businesses, featuring role-based access and reporting.</p>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">SQL</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== LEADERSHIP ==================== -->
-  <section class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto fade-in">
-          <h2 class="section-title">Leadership</h2>
-          <p class="section-subtitle">Community &amp; professional organizations</p>
-
-          <div class="icon-box text-start p-4">
-            <div class="d-flex align-items-center mb-3">
-              <i class="bi bi-people-fill me-3" style="font-size:2rem;"></i>
-              <div>
-                <h5 class="mb-0">National Society of Black Engineers (NSBE)</h5>
-                <p class="text-muted mb-0">Active Member</p>
-              </div>
-            </div>
-            <p class="mb-0">
-              Engaged with a national community of engineers, participating in
-              professional development events, networking opportunities, and
-              mentorship programs that strengthen my skills and broaden my perspective.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="footer">
-    <div class="container text-center">
-      <div class="mb-3">
-        <a href="https://github.com/Sami-T31" target="_blank" class="social-icon" aria-label="GitHub">
-          <i class="bi bi-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/samuel-tassew-942529110" target="_blank" class="social-icon" aria-label="LinkedIn">
-          <i class="bi bi-linkedin"></i>
-        </a>
+  <footer class="site-footer">
+    <div class="container d-md-flex justify-content-between align-items-center">
+      <div><span class="f-name">Samuel Tassew</span> · &copy; <span data-year>2026</span></div>
+      <div class="f-links">
+        <a href="mailto:samimu1995@gmail.com" aria-label="Email Samuel Tassew"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+        <a href="https://github.com/Sami-T31" target="_blank" rel="noopener noreferrer" aria-label="Samuel Tassew on GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/samuel-tassew-942529110" target="_blank" rel="noopener noreferrer" aria-label="Samuel Tassew on LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="Resume.pdf" download>Resume (PDF)</a>
       </div>
-      <p class="mb-0 small">&copy; 2026 Samim. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>

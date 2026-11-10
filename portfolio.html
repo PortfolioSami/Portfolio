@@ -3,212 +3,354 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio | Samim</title>
+  <title>Projects | Samuel Tassew</title>
+  <meta name="description" content="Projects by Samuel Tassew: problem, approach, result and role for each." />
+  <script>document.documentElement.classList.add('js');</script>
 
-  <!-- Bootstrap 5 CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <!-- Custom CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ==================== NAVBAR ==================== -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Main">
     <div class="container">
-      <a class="navbar-brand" href="index.html">&lt;Samim /&gt;</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <a class="navbar-brand brand" href="index.html">Samuel Tassew<span class="dot">.</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- ==================== PAGE HEADER ==================== -->
-  <section class="page-header" style="padding-top: 7rem;">
-    <div class="container">
-      <h1 class="fw-bold">My Portfolio</h1>
-      <p class="lead mb-0" style="opacity:0.9;">Projects I've designed, developed &amp; shipped</p>
-    </div>
-  </section>
+  <main id="main">
 
-  <!-- ==================== PROJECT CARDS ==================== -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center mb-5 fade-in">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-subtitle">Click each card to learn more about the project</p>
+    <!-- ==================== PAGE HEADER ==================== -->
+    <header class="page-head">
+      <div class="container">
+        <p class="eyebrow">Projects · Samuel Tassew</p>
+        <h1>Things I've built,<br />start to finish.</h1>
+        <p>Each project shows the problem, how I approached it, where it stands now, and my role on the team.</p>
+        <nav class="project-index" aria-label="Jump to a project">
+          <a href="#workforce">Workforce Management</a>
+          <a href="#exam-prep">Ethiopian Exam Prep</a>
+          <a href="#dischargelink">DischargeLink</a>
+          <a href="#parks">Public Parks Platform</a>
+          <a href="#athleteguard">AthleteGuard</a>
+        </nav>
       </div>
+    </header>
 
-      <div class="row g-4">
+    <div class="container">
 
-        <!-- Project 1 — Ethiopian Exam Prep -->
-        <div class="col-md-4 fade-in">
-          <div class="card h-100">
-            <img src="images/Examprep.png" class="card-img-top" alt="Ethiopian National Exam Prep Platform" />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Ethiopian National Exam Prep Platform</h5>
-              <p class="card-text">
-                A comprehensive ed-tech platform designed to help Ethiopian students
-                prepare for national examinations. Features include timed practice tests,
-                a real-time analytics dashboard, progress tracking across subjects, and
-                personalized study recommendations. Built with a focus on accessibility
-                and performance for users with varying internet connectivity.
-              </p>
-              <div class="mt-auto">
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">NestJS</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Redis</span>
-                <div class="mt-3">
-                  <a href="#" class="btn btn-sm btn-primary">
-                    <i class="bi bi-github me-1"></i>View on GitHub
-                  </a>
-                </div>
+      <!-- ============ 01 — WORKFORCE MANAGEMENT APP ============ -->
+      <article class="project" id="workforce" aria-labelledby="workforce-title">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-6 reveal">
+            <button type="button" class="shot" data-lightbox="images/OKR.png" aria-label="Enlarge screenshot: Workforce Management App dashboard">
+              <img src="images/OKR.png" alt="Workforce Management App dashboard with attendance stats, a weekly attendance chart and recent activity" width="2874" height="1742" />
+              <span class="zoom-hint" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i> Enlarge</span>
+            </button>
+            <p class="shot-caption">Company Admin dashboard: attendance overview and weekly trends.</p>
+          </div>
+          <div class="col-lg-6 reveal">
+            <span class="project-num">01</span>
+            <h2 id="workforce-title">Workforce Management App</h2>
+            <p class="pitch">One platform for organizations in Ethiopia to run attendance, shifts, leave and performance, in English or Amharic.</p>
+            <div>
+              <span class="chip chip-team"><i class="bi bi-people-fill" aria-hidden="true"></i> Team project · 3 people</span>
+              <span class="chip chip-status"><i class="bi bi-circle-half" aria-hidden="true"></i> In active development · since May 2025</span>
+            </div>
+            <p class="role mt-2"><strong>My role:</strong> Founder and product lead. I built the Company Admin and Super Admin web app frontends.</p>
+
+            <div class="story">
+              <div class="story-step">
+                <h3>Problem</h3>
+                <p>Organizations in Ethiopia need one place to see who clocked in, where and when, and to manage shifts, leave and performance goals for staff who often work in Amharic.</p>
               </div>
+              <div class="story-step">
+                <h3>Approach</h3>
+                <p>A multi-tenant platform where each organization gets its own workspace. It covers geofenced clock-in/out, shifts, leave management, attendance tracking, OKRs, performance review cycles, notifications and reports, with Amharic language support. I set the product direction and built the two admin web apps: Company Admin for each organization and Super Admin for running the platform across tenants.</p>
+              </div>
+              <div class="story-step">
+                <h3>Result / Status</h3>
+                <p>In active development since May 2025. <span class="ph">[ADD: what's live today / who is using it]</span></p>
+              </div>
+              <div class="story-step">
+                <h3>What I learned</h3>
+                <p><span class="ph">[ADD: one sentence on what you learned or changed while iterating]</span></p>
+              </div>
+            </div>
+
+            <div>
+              <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">SQL</span>
+              <span class="tag">Multi-tenancy</span><span class="tag">Geofencing</span><span class="tag">i18n (Amharic)</span><span class="tag">Product leadership</span>
+            </div>
+            <div class="project-actions">
+              <!-- When you have a public repo, replace the span below with:
+                   <a href="https://github.com/Sami-T31/REPO" class="btn-main btn-sm-x" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Code</a> -->
+              <span class="btn-quiet btn-sm-x"><i class="bi bi-lock" aria-hidden="true"></i> Private repo · available on request</span>
             </div>
           </div>
         </div>
+      </article>
 
-        <!-- Project 2 — DischargeLink -->
-        <div class="col-md-4 fade-in">
-          <div class="card h-100">
-            <img src="images/DischargeLink.png" class="card-img-top" alt="DischargeLink" />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">DischargeLink</h5>
-              <p class="card-text">
-                A healthcare coordination tool that streamlines hospital discharge
-                workflows. DischargeLink bridges communication gaps between care teams,
-                patients, and follow-up providers — reducing readmission risk and ensuring
-                smoother transitions from hospital to home. The platform includes
-                role-based dashboards, automated notifications, and discharge checklist
-                management.
-              </p>
-              <div class="mt-auto">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">PostgreSQL</span>
-                <span class="tech-tag">JavaScript</span>
-                <div class="mt-3">
-                  <a href="#" class="btn btn-sm btn-primary">
-                    <i class="bi bi-github me-1"></i>View on GitHub
-                  </a>
-                </div>
+      <!-- ============ 02 — ETHIOPIAN NATIONAL EXAM PREP ============ -->
+      <article class="project" id="exam-prep" aria-labelledby="exam-title">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-6 order-lg-2 reveal">
+            <button type="button" class="shot" data-lightbox="images/Examprep.png" aria-label="Enlarge screenshot: Ethiopian National Exam Prep student dashboard">
+              <img src="images/Examprep.png" alt="Ethiopian National Exam Prep student dashboard with study stats, continue-learning panel and upcoming exams" loading="lazy" width="2940" height="1912" />
+              <span class="zoom-hint" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i> Enlarge</span>
+            </button>
+            <p class="shot-caption">Student dashboard: progress, streaks and upcoming mock exams.</p>
+          </div>
+          <div class="col-lg-6 order-lg-1 reveal">
+            <span class="project-num">02</span>
+            <h2 id="exam-title">Ethiopian National Exam Prep Platform</h2>
+            <p class="pitch">Exam practice that adapts to each student's weak topics, for Ethiopian students in grades 9–12.</p>
+            <div>
+              <span class="ph">[CONFIRM: Team or Individual (+ team size)]</span>
+              <span class="chip chip-status"><i class="bi bi-circle-half" aria-hidden="true"></i> In development</span>
+            </div>
+            <p class="role mt-2"><strong>My role:</strong> <span class="ph">[ADD ROLE]</span></p>
+
+            <div class="story">
+              <div class="story-step">
+                <h3>Problem</h3>
+                <p>Students preparing for Ethiopia's national exams need realistic practice and a clear picture of which topics they're weakest in.</p>
               </div>
+              <div class="story-step">
+                <h3>Approach</h3>
+                <p>A full-stack platform with practice questions, timed mock exams, performance analytics and leaderboards. The backend runs on NestJS and PostgreSQL, with Redis caching for heavy exam-season traffic. An admin dashboard manages the question bank, and a weak-topic detection algorithm drives personalized study recommendations.</p>
+              </div>
+              <div class="story-step">
+                <h3>Result / Status</h3>
+                <p>In development. <span class="ph">[ADD: what's working now]</span></p>
+              </div>
+              <div class="story-step">
+                <h3>What I learned</h3>
+                <p><span class="ph">[ADD: one sentence on what you learned or changed while iterating]</span></p>
+              </div>
+            </div>
+
+            <div>
+              <span class="tag">Next.js</span><span class="tag">NestJS</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">TypeScript</span>
+              <span class="tag">Caching</span><span class="tag">Recommendation logic</span>
+            </div>
+            <div class="project-actions">
+              <span class="btn-quiet btn-sm-x"><i class="bi bi-lock" aria-hidden="true"></i> Private repo · available on request</span>
             </div>
           </div>
         </div>
+      </article>
 
-        <!-- Project 3 — Workforce Management -->
-        <div class="col-md-4 fade-in">
-          <div class="card h-100">
-            <img src="images/OKR.png" class="card-img-top" alt="Workforce Management System" />
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title">Workforce Management System</h5>
-              <p class="card-text">
-                An internal business tool for managing employees, scheduling shifts, and
-                tracking attendance. Features include role-based access control, automated
-                shift reminders, timesheet reporting, and an admin dashboard with key
-                workforce metrics. Designed for small-to-medium businesses looking to
-                replace spreadsheet-based scheduling.
-              </p>
-              <div class="mt-auto">
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">SQL</span>
-                <div class="mt-3">
-                  <a href="#" class="btn btn-sm btn-primary">
-                    <i class="bi bi-github me-1"></i>View on GitHub
-                  </a>
-                </div>
+      <!-- ============ 03 — DISCHARGELINK ============ -->
+      <article class="project" id="dischargelink" aria-labelledby="dl-title">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-6 reveal">
+            <button type="button" class="shot" data-lightbox="images/DischargeLink.png" aria-label="Enlarge screenshot: DischargeLink referrals dashboard">
+              <img src="images/DischargeLink.png" alt="DischargeLink dashboard with referral counts and a table of recent referrals and their status" loading="lazy" width="2940" height="1912" />
+              <span class="zoom-hint" aria-hidden="true"><i class="bi bi-arrows-fullscreen"></i> Enlarge</span>
+            </button>
+            <p class="shot-caption">Referrals dashboard: each referral's status at a glance.</p>
+          </div>
+          <div class="col-lg-6 reveal">
+            <span class="project-num">03</span>
+            <h2 id="dl-title">DischargeLink</h2>
+            <p class="pitch">A multi-sided platform that coordinates where patients go after they leave the hospital.</p>
+            <div>
+              <span class="ph">[CONFIRM: Team or Individual (+ team size)]</span>
+              <span class="chip chip-status"><i class="bi bi-circle-half" aria-hidden="true"></i> In development</span>
+            </div>
+            <p class="role mt-2"><strong>My role:</strong> <span class="ph">[ADD ROLE]</span></p>
+
+            <div class="story">
+              <div class="story-step">
+                <h3>Problem</h3>
+                <p>Placing a patient after discharge involves hospitals, adult family homes, pharmacies and the patient, and much of it is coordinated by hand.</p>
               </div>
+              <div class="story-step">
+                <h3>Approach</h3>
+                <p>One platform that serves every stakeholder. Role-based access control gives each one the right view, data handling is secure for HIPAA-adjacent workflows like referrals and medication coordination, and automated workflows replace manual follow-ups.</p>
+              </div>
+              <div class="story-step">
+                <h3>Result / Status</h3>
+                <p>In development. <span class="ph">[ADD: what's working now]</span></p>
+              </div>
+              <div class="story-step">
+                <h3>What I learned</h3>
+                <p><span class="ph">[ADD: one sentence on what you learned or changed while iterating]</span></p>
+              </div>
+            </div>
+
+            <div>
+              <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">PostgreSQL</span><span class="tag">JavaScript</span>
+              <span class="tag">RBAC</span><span class="tag">Workflow automation</span>
+            </div>
+            <div class="project-actions">
+              <span class="btn-quiet btn-sm-x"><i class="bi bi-lock" aria-hidden="true"></i> Private repo · available on request</span>
             </div>
           </div>
         </div>
+      </article>
 
-      </div>
+      <!-- ============ 04 — PUBLIC PARKS PLATFORM ============ -->
+      <article class="project" id="parks" aria-labelledby="parks-title">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-6 order-lg-2 reveal">
+            <!-- TODO: replace with a real screenshot (e.g. images/parks.png) and turn this into a <button class="shot" data-lightbox=...> like the others -->
+            <div class="shot">
+              <img src="images/placeholder-parks.svg" alt="Placeholder: Public Parks Platform screenshot coming soon" loading="lazy" width="1200" height="788" />
+            </div>
+            <div class="arch" role="img" aria-label="Architecture: resident booking app, staff enforcement app and city admin dashboard all talk to one NestJS API that uses Drizzle ORM, tested with Vitest.">
+              <div class="arch-title">Architecture</div>
+              <div class="arch-row">
+                <div class="arch-box">Resident app<small>book facilities</small></div>
+                <div class="arch-box">Staff app<small>enforce on site</small></div>
+                <div class="arch-box">City admin<small>dashboard</small></div>
+              </div>
+              <div class="arch-arrow" aria-hidden="true">↓ ↓ ↓</div>
+              <div class="arch-box core">NestJS API<small>Drizzle ORM · tested with Vitest · built against a written spec checklist</small></div>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1 reveal">
+            <span class="project-num">04</span>
+            <h2 id="parks-title">Public Parks Platform</h2>
+            <p class="pitch">Reservations and on-site enforcement for public recreation facilities in Addis Ababa: one backend, three apps.</p>
+            <div>
+              <span class="ph">[CONFIRM: Team or Individual (+ team size)]</span>
+              <span class="chip chip-status"><i class="bi bi-circle-half" aria-hidden="true"></i> Backend nearly complete · frontend in progress</span>
+            </div>
+            <p class="role mt-2"><strong>My role:</strong> <span class="ph">[ADD ROLE]</span></p>
+
+            <div class="story">
+              <div class="story-step">
+                <h3>Problem</h3>
+                <p>Public recreation facilities in Addis Ababa need a way for residents to book them, for staff to enforce bookings on site, and for the city to oversee it all.</p>
+              </div>
+              <div class="story-step">
+                <h3>Approach</h3>
+                <p>Three clients (a resident booking app, a staff enforcement app and a city admin dashboard) share one NestJS backend that uses Drizzle ORM. The backend is built spec-first: the required behavior went into a written checklist before any code, and the backend is built and tested against that checklist with Vitest.</p>
+              </div>
+              <div class="story-step">
+                <h3>Result / Status</h3>
+                <p>Backend nearly complete; frontend in progress.</p>
+              </div>
+              <div class="story-step">
+                <h3>What I learned</h3>
+                <p><span class="ph">[ADD: one sentence on what you learned or changed while iterating]</span></p>
+              </div>
+            </div>
+
+            <div>
+              <span class="tag">NestJS</span><span class="tag">TypeScript</span><span class="tag">Drizzle ORM</span><span class="tag">Vitest</span>
+              <span class="tag">Spec-first development</span><span class="tag">API design</span>
+            </div>
+            <div class="project-actions">
+              <span class="btn-quiet btn-sm-x"><i class="bi bi-lock" aria-hidden="true"></i> Private repo · available on request</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 05 — ATHLETEGUARD (CAPSTONE) ============ -->
+      <article class="project" id="athleteguard" aria-labelledby="ag-title">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-6 reveal">
+            <!-- TODO: replace with a real screenshot / mockup (e.g. images/athleteguard.png) -->
+            <div class="shot">
+              <img src="images/placeholder-athleteguard.svg" alt="Placeholder: AthleteGuard screenshot coming soon" loading="lazy" width="1200" height="788" />
+            </div>
+          </div>
+          <div class="col-lg-6 reveal">
+            <span class="project-num">05</span>
+            <h2 id="ag-title">AthleteGuard</h2>
+            <p class="pitch">Explainable injury-risk monitoring for competitive soccer teams.</p>
+            <div>
+              <span class="chip chip-team"><i class="bi bi-people-fill" aria-hidden="true"></i> Team project · 5 people · senior capstone</span>
+              <span class="chip chip-status"><i class="bi bi-circle-half" aria-hidden="true"></i> In progress · due May 2027</span>
+            </div>
+            <p class="role mt-2"><strong>My role:</strong> <span class="ph">[ADD ROLE]</span></p>
+
+            <div class="story">
+              <div class="story-step">
+                <h3>Problem</h3>
+                <p>Soccer teams want to spot injury risk early, and coaches need to understand why a player is flagged before they act on it.</p>
+              </div>
+              <div class="story-step">
+                <h3>Approach</h3>
+                <p>An injury-risk monitoring app where explainability is the core design goal: it should show the reasons behind each risk flag, not just a score. We're working in sprints from a prioritized MVP backlog.</p>
+              </div>
+              <div class="story-step">
+                <h3>Result / Status</h3>
+                <p>Sprint kickoff and MVP backlog stage. Final delivery is due May 2027.</p>
+              </div>
+              <div class="story-step">
+                <h3>What I learned</h3>
+                <p><span class="ph">[ADD: one sentence on what you learned or changed while iterating]</span></p>
+              </div>
+            </div>
+
+            <div>
+              <span class="ph">[ADD TECH STACK]</span>
+              <span class="tag">Explainable risk scoring</span><span class="tag">Agile sprints</span><span class="tag">Team collaboration</span>
+            </div>
+            <div class="project-actions">
+              <span class="btn-quiet btn-sm-x"><i class="bi bi-lock" aria-hidden="true"></i> Private repo · available on request</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
     </div>
-  </section>
 
-  <!-- ==================== WHAT I'M INTERESTED IN ==================== -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="text-center mb-5 fade-in">
-        <h2 class="section-title">What I'm Interested In</h2>
-        <p class="section-subtitle">Areas I'm passionate about and actively exploring</p>
-      </div>
-
-      <div class="row g-4 justify-content-center">
-        <!-- Frontend -->
-        <div class="col-md-4 fade-in">
-          <div class="icon-box h-100">
-            <i class="bi bi-window-stack"></i>
-            <h5>Frontend Development</h5>
-            <p class="text-muted mb-0">
-              Crafting responsive, accessible, and visually engaging user interfaces
-              with React, Next.js, and modern CSS. I enjoy translating designs into
-              smooth, interactive experiences.
-            </p>
-          </div>
-        </div>
-        <!-- Backend -->
-        <div class="col-md-4 fade-in">
-          <div class="icon-box h-100">
-            <i class="bi bi-server"></i>
-            <h5>Backend Development</h5>
-            <p class="text-muted mb-0">
-              Building robust APIs, database architectures, and server-side logic
-              with Node.js, NestJS, PostgreSQL, and Redis. I care about clean
-              architecture and scalable design.
-            </p>
-          </div>
-        </div>
-        <!-- Software Engineering -->
-        <div class="col-md-4 fade-in">
-          <div class="icon-box h-100">
-            <i class="bi bi-gear-wide-connected"></i>
-            <h5>Software Engineering</h5>
-            <p class="text-muted mb-0">
-              Applying best practices in version control, testing, CI/CD, and team
-              collaboration. I'm eager to work on production-grade systems and grow
-              as a well-rounded engineer.
-            </p>
+    <!-- ==================== CTA ==================== -->
+    <section class="section pt-4">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <h2>Want to see the code?</h2>
+              <p class="mb-0">Most of these repositories are private. I'm happy to walk you through the code or share access on request.</p>
+            </div>
+            <div class="col-lg-5 d-flex flex-wrap gap-2 justify-content-lg-end">
+              <a href="contact.html" class="btn-main">Get in touch</a>
+              <a href="https://github.com/Sami-T31" class="btn-line" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i> GitHub profile</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+  </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="footer">
-    <div class="container text-center">
-      <div class="mb-3">
-        <a href="https://github.com/Sami-T31" target="_blank" class="social-icon" aria-label="GitHub">
-          <i class="bi bi-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/samuel-tassew-942529110" target="_blank" class="social-icon" aria-label="LinkedIn">
-          <i class="bi bi-linkedin"></i>
-        </a>
+  <footer class="site-footer">
+    <div class="container d-md-flex justify-content-between align-items-center">
+      <div><span class="f-name">Samuel Tassew</span> · &copy; <span data-year>2026</span></div>
+      <div class="f-links">
+        <a href="mailto:samimu1995@gmail.com" aria-label="Email Samuel Tassew"><i class="bi bi-envelope" aria-hidden="true"></i></a>
+        <a href="https://github.com/Sami-T31" target="_blank" rel="noopener noreferrer" aria-label="Samuel Tassew on GitHub"><i class="bi bi-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/samuel-tassew-942529110" target="_blank" rel="noopener noreferrer" aria-label="Samuel Tassew on LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        <a href="Resume.pdf" download>Resume (PDF)</a>
       </div>
-      <p class="mb-0 small">&copy; 2026 Samim. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
   <script src="script.js"></script>
 </body>
 </html>
