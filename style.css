@@ -579,3 +579,7 @@ a.contact-card:hover { border-color: var(--accent); color: var(--ink); transform
   a[href^="http"]:not(.contact-card)::after { content: " (" attr(href) ")"; font-size: 8.5pt; color: #555; word-break: break-all; }
   .ph { background: none; border: 1px dashed #999; }
 }
+
+/* Real badge image variant */
+.cert-badge.has-img { flex: 0 0 220px; width: 220px; max-width: 100%; height: auto; background: none; border: 0; border-radius: 0; }
+.cert-badge.has-img img { height: auto; }
